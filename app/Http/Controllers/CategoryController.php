@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller {
+class CategoryController extends Controller {
   /**
    * Display a listing of the resource.
    *
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    //
+    $categories = Category::orderBy('name', 'asc')->get();
+    return view('home', compact('categories'));
   }
 
   /**

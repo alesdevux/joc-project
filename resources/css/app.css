@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,600&display=swap');
+
+.h2 {
+  @apply font-bold uppercase text-h2;
+}
+.destacar {
+  @apply font-semibold italic text-[13px] uppercase;
+}
+
+.card,
+.card * {
+  @apply duration-300 ease-in-out;
+}
