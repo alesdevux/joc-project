@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tournament;
 use Illuminate\Http\Request;
 
-class TournamentController extends Controller
-{
+class TournamentController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+      $tournaments = Tournament::orderBy('date', 'desc')->simplePaginate(10);
+      return view('home', compact('tournaments'));
     }
 
     /**
