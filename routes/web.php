@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* Route::get('/', function () {
+    return view('home');
+}); */
 
 Auth::routes();
 
-Route::get('/home', [CategoryController::class, 'index'])->name('home');
+Route::get('/', [CategoryController::class, 'index'])->name('home');

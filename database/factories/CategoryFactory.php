@@ -19,7 +19,7 @@ class CategoryFactory extends Factory {
     return [
       'name' => $name,
       'slug' =>  $slug,
-      'image' => $this->faker->imageUrl(200, 300),
+      'image' => $this->faker->imageUrl(275, 404, 'cats'),
     ];
   }
 }

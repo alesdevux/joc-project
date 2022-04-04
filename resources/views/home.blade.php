@@ -24,11 +24,16 @@
           </p>
         </div>
         <div id="filtro" class="absolute top-0 z-10 w-full h-full bg-cover"></div>
-        <div id="img-fondo"
-          class="bg-[url('{{ $category->image }}')]
-          absolute w-full h-full top-0 z-0 bg-cover">
+        <div class="absolute w-full h-full top-0 z-0 box-content">
+          <img src="{{ $category->image }}" alt="" class="h-full">
         </div>
+        {{-- <div id="img-fondo"
+          class="bg-[url('{{ $category->image }}')] absolute w-full h-full top-0 z-0 bg-cover">
+        </div> --}}
       </div>
     @endforeach
+  </div>
+  <div class="text-center">
+    {{ $categories->links() }}
   </div>
 @endsection

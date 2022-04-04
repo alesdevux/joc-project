@@ -12,7 +12,7 @@ class CategoryController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    $categories = Category::orderBy('name', 'asc')->get();
+    $categories = Category::orderBy('name', 'asc')->simplePaginate(8);
     return view('home', compact('categories'));
   }
 
