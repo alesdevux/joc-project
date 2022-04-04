@@ -9,6 +9,17 @@
           <p>Martes 23 junio</p>
           <p>19:30h</p>
         </div>
+        <div class="absolute z-30 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
+          <form action="{{ route('categories.delete', $category->id) }}" method="POST"
+            class="flex justify-center w-10 h-10 border-b-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
+            @method('DELETE')
+            @csrf
+            <button type="submit" onclick="return confirm('¿Estás seguro de eliminar la categoría {{ $category->name }}?')">
+              x
+            </button>
+          </form>
+          <div class="flex justify-center w-10 h-10 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">edit</div>
+        </div>
         <div id="juego" 
           class="absolute bottom-0 z-20 w-full text-center">
           <div class="absolute w-full scale-125 -bottom-44 group-hover:bottom-0 h-28 bg-principal -rotate-2"></div>
@@ -24,7 +35,7 @@
           </p>
         </div>
         <div id="filtro" class="absolute top-0 z-10 w-full h-full bg-cover"></div>
-        <div class="absolute w-full h-full top-0 z-0 box-content">
+        <div class="box-content absolute top-0 z-0 w-full h-full">
           <img src="{{ $category->image }}" alt="" class="h-full">
         </div>
         {{-- <div id="img-fondo"

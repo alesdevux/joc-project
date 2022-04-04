@@ -8,21 +8,29 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class CrudTest extends TestCase {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
+  /**
+   * A basic feature test example.
+   *
+   * @return void
+   */
 
-    use RefreshDatabase;
+  use RefreshDatabase;
 
-    public function test_list_categories_appear_in_home() {
-        $this->withExceptionHandling();
+  public function test_list_categories_appear_in_home() {
+    $this->withExceptionHandling();
+    Category::all();
 
-        Category::all();
+    $response = $this->get('/');
+    $response->assertStatus(200)->assertViewIs('home');
+  }
 
-        $response = $this->get('/');
+  public function test_categories_can_be_delete() {
+    $this->withExceptionHandling();
+    $category = Category::factory()->create();
 
-        $response->assertStatus(200)->assertViewIs('home');
-    }
+    $this->assertCount(1, Category::where('id', $category->id)->get());
+
+    $response = $this->delete(route('categories.delete', $category->id));
+    $this->assertCount(0, Category::where('id', $category->id)->get());
+  }
 }

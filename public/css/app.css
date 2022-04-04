@@ -473,6 +473,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-5 {
   top: 1.25rem;
 }
+.-right-16 {
+  right: -4rem;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -499,6 +502,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .z-20 {
   z-index: 20;
+}
+.z-30 {
+  z-index: 30;
 }
 .z-10 {
   z-index: 10;
@@ -564,6 +570,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-\[404px\] {
   height: 404px;
 }
+.h-10 {
+  height: 2.5rem;
+}
 .h-28 {
   height: 7rem;
 }
@@ -582,29 +591,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-16 {
   height: 4rem;
 }
-.h-96 {
-  height: 24rem;
-}
-.h-\[\] {
-  height: ;
-}
-.h-\[404\] {
-  height: 404;
-}
-.h-\[4\] {
-  height: 4;
-}
 .min-h-screen {
   min-height: 100vh;
 }
 .w-\[275px\] {
   width: 275px;
 }
+.w-10 {
+  width: 2.5rem;
+}
 .w-full {
   width: 100%;
-}
-.w-\[404px\] {
-  width: 404px;
 }
 .w-5 {
   width: 1.25rem;
@@ -614,18 +611,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-auto {
   width: auto;
-}
-.w-9 {
-  width: 2.25rem;
-}
-.w-96 {
-  width: 24rem;
-}
-.w-\[\] {
-  width: ;
-}
-.w-\[404\] {
-  width: 404;
 }
 .max-w-6xl {
   max-width: 72rem;
@@ -639,26 +624,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.scale-100 {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.scale-x-100 {
-  --tw-scale-x: 1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .cursor-pointer {
   cursor: pointer;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-.content-center {
-  align-content: center;
+.flex-col {
+  flex-direction: column;
+}
+.place-items-center {
+  place-items: center;
 }
 .items-center {
   align-items: center;
@@ -672,8 +648,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 .overflow-hidden {
   overflow: hidden;
 }
+.border-4 {
+  border-width: 4px;
+}
+.border-r-0 {
+  border-right-width: 0px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+.border-t-2 {
+  border-top-width: 2px;
+}
 .border-t {
   border-top-width: 1px;
+}
+.border-principal {
+  --tw-border-opacity: 1;
+  border-color: rgb(97 255 255 / var(--tw-border-opacity));
 }
 .border-gray-200 {
   --tw-border-opacity: 1;
@@ -697,14 +689,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .bg-cover {
   background-size: cover;
-}
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.object-scale-down {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
 }
 .p-6 {
   padding: 1.5rem;
@@ -837,6 +821,16 @@ video, image {
   border-color: rgb(97 255 255 / var(--tw-border-opacity));
 }
 
+.hover\:bg-terciary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 97 249 / var(--tw-bg-opacity));
+}
+
+.hover\:text-dark:hover {
+  --tw-text-opacity: 1;
+  color: rgb(31 49 63 / var(--tw-text-opacity));
+}
+
 .hover\:drop-shadow-consistent:hover {
   --tw-drop-shadow: drop-shadow(4px 4px 0 #FF61F9);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -844,6 +838,10 @@ video, image {
 
 .group:hover .group-hover\:left-5 {
   left: 1.25rem;
+}
+
+.group:hover .group-hover\:right-0 {
+  right: 0px;
 }
 
 .group:hover .group-hover\:bottom-0 {

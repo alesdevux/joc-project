@@ -73,6 +73,7 @@ class CategoryController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy($id) {
-    //
+    Category::destroy($id);
+    return redirect()->route('home');
   }
 }
