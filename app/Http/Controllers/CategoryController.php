@@ -31,7 +31,7 @@ class CategoryController extends Controller {
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request) {
+  public function store(Request $request, $id) {
     //
   }
 
@@ -52,7 +52,8 @@ class CategoryController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function edit($id) {
-    //
+    $category = Category::find($id);
+    return view('categories.edit', compact('category'));
   }
 
   /**
@@ -63,9 +64,12 @@ class CategoryController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function update(Request $request, $id) {
-    //
-  }
+    $changeCategory = request()->except(['_token', '_method']);
+    Category::where('id', $id)->update($changeCategory);
 
+    return redirect()->route('home');
+  }
+ 
   /**
    * Remove the specified resource from storage.
    *

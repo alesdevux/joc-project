@@ -4,7 +4,7 @@
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
     @foreach($categories as $category)
       <div class="w-[275px] h-[404px] relative font-pop card mt-2 mx-auto group overflow-hidden hover:border-4 hover:border-principal cursor-pointer hover:drop-shadow-consistent">
-        <div id="info-text" class="absolute z-20 font-semibold text-white uppercase -left-36 top-5 group-hover:left-5">
+        <div class="absolute z-20 font-semibold text-white uppercase -left-36 top-5 group-hover:left-5">
           <p class="text-[13px] mb-2">Siguiente</p>
           <p>Martes 23 junio</p>
           <p>19:30h</p>
@@ -18,10 +18,15 @@
               x
             </button>
           </form>
-          <div class="flex justify-center w-10 h-10 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">edit</div>
+
+          <a href="{{ route('categories.edit', $category->id) }}">
+            <button class="flex justify-center w-10 h-10 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
+              edit
+            </button>
+          </a>
+
         </div>
-        <div id="juego" 
-          class="absolute bottom-0 z-20 w-full text-center">
+        <div class="absolute bottom-0 z-20 w-full text-center">
           <div class="absolute w-full scale-125 -bottom-44 group-hover:bottom-0 h-28 bg-principal -rotate-2"></div>
           <h2 class="absolute w-full text-white bottom-4 h2 group-hover:text-dark group-hover:bottom-20">
             {{ $category->name }}
@@ -34,11 +39,11 @@
             Inscribete
           </p>
         </div>
-        <div id="filtro" class="absolute top-0 z-10 w-full h-full bg-cover"></div>
+        <div class="absolute top-0 z-10 w-full h-full bg-cover"></div>
         <div class="box-content absolute top-0 z-0 w-full h-full">
           <img src="{{ $category->image }}" alt="" class="h-full">
         </div>
-        {{-- <div id="img-fondo"
+        {{-- <div
           class="bg-[url('{{ $category->image }}')] absolute w-full h-full top-0 z-0 bg-cover">
         </div> --}}
       </div>

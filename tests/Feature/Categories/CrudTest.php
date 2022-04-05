@@ -33,4 +33,15 @@ class CrudTest extends TestCase {
     $response = $this->delete(route('categories.delete', $category->id));
     $this->assertCount(0, Category::where('id', $category->id)->get());
   }
+
+  public function test_category_can_be_update() {
+    $this->withExceptionHandling();
+    $category = Category::factory()->create();
+    
+    $this->assertCount(1, Category::where('id', $category->id)->get());
+
+    $this->put(route('categories.update', $category->id), ['name' => 'new name']);
+
+    $this->assertEquales(Category::where('id', $category->id)->name, 'new name');
+  }
 }
