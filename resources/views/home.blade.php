@@ -10,11 +10,11 @@
           <p>19:30h</p>
         </div>
         <div class="absolute z-30 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
-          <form action="{{ route('categories.delete', $category->id) }}" method="POST"
-            class="flex justify-center w-10 h-10 border-b-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
+          <form action="{{ route('categories.delete', $category->id) }}" method="POST">
             @method('DELETE')
             @csrf
-            <button type="submit" onclick="return confirm('¿Estás seguro de eliminar la categoría {{ $category->name }}?')">
+            <button type="submit" onclick="return confirm('¿Estás seguro de eliminar la categoría {{ $category->name }}?')"
+              class="flex justify-center w-10 h-10 border-b-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
               x
             </button>
           </form>

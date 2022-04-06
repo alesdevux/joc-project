@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form method="POST" action="{{ route('categories.update', $category->id) }}">
+<form method="POST" action="{{ route('categories.update', $category->id) }}" class="flex flex-col max-w-lg gap-5 mx-auto mt-5">
   @method('PATCH')
   @csrf
 
@@ -30,11 +30,9 @@
     <button type="submit" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
       Actualizar
     </button>
-    <button>
-      <a href="{{ route('home') }}" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
-        Cancelar
-      </a>
-    </button>
+    <a href="{{ route('home') }}" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
+      Cancelar
+    </a>
   </div>
 
 </form>
