@@ -28,6 +28,6 @@ Route::get('/', [CategoryController::class, 'index'])->name('home');
 // Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
 // Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store');
 
-Route::delete('/categories/delete/{category}', [CategoryController::class, 'destroy'])->name('categories.delete');
-Route::get('/categories/edit/{category}', [CategoryController::class, 'edit'])->name('categories.edit');
-Route::put('/categories/update/{category}', [CategoryController::class, 'update'])->name('categories.update');
+Route::delete('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.delete');
+Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])->name('categories.edit');
+Route::patch('/categories/update/{id}', [CategoryController::class, 'update'])->name('categories.update');
