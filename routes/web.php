@@ -16,18 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
-    return view('home');
-}); */
-
-Auth::routes();
-
 Route::get('/', [CategoryController::class, 'index'])->name('home');
-
-// CRUD Categories 
-// Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
-// Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store');
 
 Route::delete('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.delete');
 Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])->name('categories.edit');
 Route::patch('/categories/update/{id}', [CategoryController::class, 'update'])->name('categories.update');
+
+Auth::routes();
