@@ -43,5 +43,14 @@ class CrudTest extends TestCase {
     $this->patch(route('categories.update', $category->id), ["name" => "new name"]);
 
     $this->assertEquals("new name", Category::first()->name);
+    $this->assertCount(1, Category::all());
+  }
+
+  public function test_view_edit_form() {
+    $this->withExceptionHandling();
+    $category = Category::factory()->create();
+
+    $response = $this->get(route('categories.edit', $category->id));
+    $response->assertStatus(200)->assertViewIs('categories.edit');
   }
 }
