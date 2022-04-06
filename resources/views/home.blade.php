@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+  <div>
+    <a href="{{ route('categories.create') }}" class="flex justify-center p-2 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
+      Crear una nueva categoría
+    </a>
+  </div>
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
     @foreach($categories as $category)
       <div class="w-[275px] h-[404px] relative font-pop card mt-2 mx-auto group overflow-hidden hover:border-4 hover:border-principal cursor-pointer hover:drop-shadow-consistent">
@@ -9,7 +14,7 @@
           <p>Martes 23 junio</p>
           <p>19:30h</p>
         </div>
-        <div class="absolute z-30 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
+        <div class="absolute z-40 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
           <form action="{{ route('categories.delete', $category->id) }}" method="POST">
             @method('DELETE')
             @csrf
@@ -26,6 +31,7 @@
           </a>
 
         </div>
+        <a href="{{ route('categories.show', $category->id) }}" class="absolute top-0 z-30 w-full h-full bg-cover"></a>
         <div class="absolute bottom-0 z-20 w-full text-center">
           <div class="absolute w-full scale-125 -bottom-44 group-hover:bottom-0 h-28 bg-principal -rotate-2"></div>
           <h2 class="absolute w-full text-white bottom-4 h2 group-hover:text-dark group-hover:bottom-20">

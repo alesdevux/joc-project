@@ -53,4 +53,31 @@ class CrudTest extends TestCase {
     $response = $this->get(route('categories.edit', $category->id));
     $response->assertStatus(200)->assertViewIs('categories.edit');
   }
+
+  public function test_create_category() {
+    $this->withExceptionHandling();
+    // $category = Category::factory()->make();
+
+    $response = $this->post(route('categories.store'), [
+      'name' => 'New test',
+      'slug' => 'new-test',
+      'image' => 'test.png',
+    ]);
+    $this->assertCount(1, Category::all());
+    $response->assertStatus(302)->assertRedirect(route('home'));
+  }
+
+  public function test_view_create_form() {
+    $this->withExceptionHandling();
+    $response = $this->get(route('categories.create'));
+    $response->assertStatus(200)->assertViewIs('categories.create');
+  }
+
+  public function test_view_show_ok() {
+    $this->withExceptionHandling();
+    $category = Category::factory()->create();
+
+    $response = $this->get(route('categories.show', $category->id));
+    $response->assertStatus(200)->assertSee($category->name);
+  }
 }

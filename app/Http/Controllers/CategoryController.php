@@ -22,7 +22,7 @@ class CategoryController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function create() {
-    //
+    return view('categories.create');
   }
 
   /**
@@ -31,8 +31,11 @@ class CategoryController extends Controller {
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request, $id) {
-    //
+  public function store(Request $request) {
+    $newCategory = request()->except('_token');
+
+    Category::create($newCategory);
+    return redirect()->route('home');
   }
 
   /**
@@ -42,7 +45,8 @@ class CategoryController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function show($id) {
-    //
+    $category = Category::find($id);
+    return view('categories.show', compact('category'));
   }
 
   /**
