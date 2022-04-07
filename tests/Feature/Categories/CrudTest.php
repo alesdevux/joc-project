@@ -25,7 +25,7 @@ class CrudTest extends TestCase {
     $response->assertStatus(200)->assertViewIs('home');
   }
 
-  public function test_categories_can_be_delete() {
+  public function test_categories_can_be_delete_if_user_is_admin() {
     $this->withExceptionHandling();
 
     $userAdmin = User::factory()->create(['isAdmin' => true]);
@@ -36,6 +36,20 @@ class CrudTest extends TestCase {
     $response = $this->delete(route('categories.delete', $category->id));
     $this->assertCount(0, Category::all());
   }
+
+  public function test_categories_can_not_be_delete_if_user_is_not_admin() {
+    $this->withExceptionHandling();
+
+    $user1 = User::factory()->create();
+    $this->actingAs($user1);
+
+    $category = Category::factory()->create();
+    $this->assertCount(1, Category::all());
+
+    $response = $this->delete(route('categories.delete', $category->id));
+    $this->assertCount(1, Category::all());
+  }
+
 
   public function test_category_can_be_update() {
     $this->withExceptionHandling();
@@ -101,4 +115,5 @@ class CrudTest extends TestCase {
     $response = $this->get(route('categories.show', $category->id));
     $response->assertStatus(200)->assertSee($category->name);
   }
+
 }

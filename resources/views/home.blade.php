@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if (Auth::check() && Auth::user()->isAdmin())
   <div>
     <a href="{{ route('categories.create') }}" class="flex justify-center p-2 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
       Crear una nueva categoría
     </a>
   </div>
+@endif
+
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
     @foreach($categories as $category)
       <div class="w-[275px] h-[404px] relative font-pop card mt-2 mx-auto group overflow-hidden hover:border-4 hover:border-principal cursor-pointer hover:drop-shadow-consistent">
@@ -18,17 +22,21 @@
           <form action="{{ route('categories.delete', $category->id) }}" method="POST">
             @method('DELETE')
             @csrf
+            @if (Auth::check() && Auth::user()->isAdmin())
             <button type="submit" onclick="return confirm('¿Estás seguro de eliminar la categoría {{ $category->name }}?')"
               class="flex justify-center w-10 h-10 border-b-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
               x
             </button>
+            @endif
           </form>
 
+          @if (Auth::check() && Auth::user()->isAdmin())
           <a href="{{ route('categories.edit', $category->id) }}">
             <button class="flex justify-center w-10 h-10 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
               edit
             </button>
           </a>
+          @endif
 
         </div>
         <a href="{{ route('categories.show', $category->id) }}" class="absolute top-0 z-30 w-full h-full bg-cover"></a>
