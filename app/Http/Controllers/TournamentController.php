@@ -34,7 +34,10 @@ class TournamentController extends Controller {
      */
     public function store(Request $request)
     {
-        //
+        $newTournament = request()->except('_token');
+
+        Tournament::create($newTournament);
+        return redirect()->back();
     }
 
     /**
@@ -56,7 +59,8 @@ class TournamentController extends Controller {
      */
     public function edit($id)
     {
-        //
+        $tournament = Tournament::find($id);
+        return view('tournaments.edit', compact('tournament'));
     }
 
     /**
@@ -68,7 +72,10 @@ class TournamentController extends Controller {
      */
     public function update(Request $request, $id)
     {
-        //
+        $changeTournament = request()->except('_token');
+        $tournament = Tournament::find($id);
+        $tournament->update($changeTournament);
+        return redirect()->back();
     }
 
     /**
@@ -79,6 +86,7 @@ class TournamentController extends Controller {
      */
     public function destroy($id)
     {
-        //
+        Tournament::destroy($id);
+        return redirect()->back();
     }
 }
