@@ -13,4 +13,8 @@ class Category extends Model {
     'slug',
     'image',
   ];
+
+  public function tournaments() {
+    return $this->hasMany(Tournament::class);
+  }
 }

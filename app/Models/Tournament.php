@@ -17,4 +17,12 @@ class Tournament extends Model
        'date',
        'plataform',
     ];
+    
+    public function users() {
+        return $this->belongsToMany(User::class);
+    }
+
+    public function category() {
+        return $this->belongsTo(Category::class);
+    }
 }

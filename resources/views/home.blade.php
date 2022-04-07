@@ -18,27 +18,24 @@
           <p>Martes 23 junio</p>
           <p>19:30h</p>
         </div>
-        <div class="absolute z-40 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
-          <form action="{{ route('categories.delete', $category->id) }}" method="POST">
-            @method('DELETE')
-            @csrf
-            @if (Auth::check() && Auth::user()->isAdmin())
-            <button type="submit" onclick="return confirm('¿Estás seguro de eliminar la categoría {{ $category->name }}?')"
-              class="flex justify-center w-10 h-10 border-b-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
-              x
-            </button>
-            @endif
-          </form>
+        @if (Auth::check() && Auth::user()->isAdmin())
+          <div class="absolute z-40 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
+            <form action="{{ route('categories.delete', $category->id) }}" method="POST">
+              @method('DELETE')
+              @csrf
+              <button type="submit" onclick="return confirm('¿Estás seguro de eliminar la categoría {{ $category->name }}?')"
+                class="flex justify-center w-10 h-10 border-b-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
+                x
+              </button>
+            </form>
 
-          @if (Auth::check() && Auth::user()->isAdmin())
-          <a href="{{ route('categories.edit', $category->id) }}">
-            <button class="flex justify-center w-10 h-10 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
-              edit
-            </button>
-          </a>
-          @endif
-
-        </div>
+            <a href="{{ route('categories.edit', $category->id) }}">
+              <button class="flex justify-center w-10 h-10 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
+                edit
+              </button>
+            </a>
+          </div>
+        @endif
         <a href="{{ route('categories.show', $category->id) }}" class="absolute top-0 z-30 w-full h-full bg-cover"></a>
         <div class="absolute bottom-0 z-20 w-full text-center">
           <div class="absolute w-full scale-125 -bottom-44 group-hover:bottom-0 h-28 bg-principal -rotate-2"></div>

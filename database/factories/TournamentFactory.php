@@ -25,6 +25,7 @@ class TournamentFactory extends Factory
             'award'=>$this->faker->numberBetween(50, 10000),
             'date'=>$this->faker->dateTime,
             'plataform'=>$this->faker->word,
+            'category_id'=>$this->faker->numberBetween(1, 5),
         ];
     }
 }

@@ -50,4 +50,7 @@ class User extends Authenticatable
         return false;
     }
 
+    public function tournament(){ 
+        return $this->belongsToMany(Tournament::class); 
+    }
 }

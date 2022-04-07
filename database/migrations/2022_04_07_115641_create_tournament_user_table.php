@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             
             $table->unsignedBigInteger('tournament_id');
-            $table->foreign('tournament_id')->references('id')->on('tournaments');
+            $table->foreign('tournament_id')->references('id')->on('tournaments')->onDelete('cascade');
 
             $table->timestamps();
 
