@@ -476,6 +476,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-right-16 {
   right: -4rem;
 }
+.top-0 {
+  top: 0px;
+}
 .bottom-0 {
   bottom: 0px;
 }
@@ -494,9 +497,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-bottom-10 {
   bottom: -2.5rem;
 }
-.top-0 {
-  top: 0px;
-}
 .right-0 {
   right: 0px;
 }
@@ -509,6 +509,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-20 {
   z-index: 20;
 }
+.z-40 {
+  z-index: 40;
+}
 .z-30 {
   z-index: 30;
 }
@@ -520,9 +523,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .z-50 {
   z-index: 50;
-}
-.z-40 {
-  z-index: 40;
 }
 .m-0 {
   margin: 0px;
@@ -588,14 +588,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-10 {
   height: 2.5rem;
 }
+.h-full {
+  height: 100%;
+}
 .h-28 {
   height: 7rem;
 }
 .h-14 {
   height: 3.5rem;
-}
-.h-full {
-  height: 100%;
 }
 .h-5 {
   height: 1.25rem;
@@ -675,14 +675,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-4 {
   border-width: 4px;
 }
+.border-t-2 {
+  border-top-width: 2px;
+}
 .border-r-0 {
   border-right-width: 0px;
 }
 .border-b-2 {
   border-bottom-width: 2px;
-}
-.border-t-2 {
-  border-top-width: 2px;
 }
 .border-t {
   border-top-width: 1px;
@@ -718,14 +718,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-cover {
   background-size: cover;
 }
+.p-2 {
+  padding: 0.5rem;
+}
 .p-6 {
   padding: 1.5rem;
 }
 .p-0 {
   padding: 0px;
-}
-.p-2 {
-  padding: 0.5rem;
 }
 .py-4 {
   padding-top: 1rem;

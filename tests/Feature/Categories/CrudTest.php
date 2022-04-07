@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -26,6 +27,10 @@ class CrudTest extends TestCase {
 
   public function test_categories_can_be_delete() {
     $this->withExceptionHandling();
+
+    $userAdmin = User::factory()->create(['isAdmin' => true]);
+    $this->actingAs($userAdmin);
+
     $category = Category::factory()->create();
 
     $response = $this->delete(route('categories.delete', $category->id));
@@ -34,6 +39,10 @@ class CrudTest extends TestCase {
 
   public function test_category_can_be_update() {
     $this->withExceptionHandling();
+
+    $userAdmin = User::factory()->create(['isAdmin' => true]);
+    $this->actingAs($userAdmin);
+
     $category = Category::factory()->create([
       'name' => 'test',
     ]);
@@ -48,6 +57,10 @@ class CrudTest extends TestCase {
 
   public function test_view_edit_form() {
     $this->withExceptionHandling();
+
+    $userAdmin = User::factory()->create(['isAdmin' => true]);
+    $this->actingAs($userAdmin);
+
     $category = Category::factory()->create();
 
     $response = $this->get(route('categories.edit', $category->id));
@@ -57,6 +70,9 @@ class CrudTest extends TestCase {
   public function test_create_category() {
     $this->withExceptionHandling();
     // $category = Category::factory()->make();
+
+    $userAdmin = User::factory()->create(['isAdmin' => true]);
+    $this->actingAs($userAdmin);
 
     $response = $this->post(route('categories.store'), [
       'name' => 'New test',
@@ -69,12 +85,17 @@ class CrudTest extends TestCase {
 
   public function test_view_create_form() {
     $this->withExceptionHandling();
+
+    $userAdmin = User::factory()->create(['isAdmin' => true]);
+    $this->actingAs($userAdmin);
+
     $response = $this->get(route('categories.create'));
     $response->assertStatus(200)->assertViewIs('categories.create');
   }
 
   public function test_view_show_ok() {
     $this->withExceptionHandling();
+
     $category = Category::factory()->create();
 
     $response = $this->get(route('categories.show', $category->id));
