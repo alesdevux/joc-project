@@ -11,8 +11,6 @@ use Tests\TestCase;
 
 class CrudTest extends TestCase
 {
-    /* create crud test of Tournaments */
-    /* tournaments has category_id key in database */
     use RefreshDatabase;
 
     public function test_admin_can_be_delete_tournament()
@@ -92,17 +90,25 @@ class CrudTest extends TestCase
         $this->actingAs($userAdmin);
 
         $category = Category::factory()->create();
-
-        $response = $this->post(route('tournaments.store'), [
-            'title' => 'Hola',
-            'description' => 'holiiis',
-            'award' => 'sasasa',
-            'date' => '2030-04-01',
-            'plataform' => 'new platsdaaform',
-            'category_id' => $category->id,
+        $tournament = Tournament::factory()->create([
+          'title' => 'Hola',
+          'description' => 'holiiis',
+          'award' => 'sasasa',
+          'date' => '2030-04-01',
+          'plataform' => 'new platsdaaform',
+          'category_id' => $category->id, 
         ]);
 
+        $response = $this->post(route('tournaments.store', $tournament));
+
         $this->assertCount(1, Tournament::all());
-        $response->assertStatus(302);
+        $this->assertDatabaseHas('tournaments', [
+          'title' => 'Hola',
+          'description' => 'holiiis',
+          'award' => 'sasasa',
+          'date' => '2030-04-01',
+          'plataform' => 'new platsdaaform',
+          'category_id' => $category->id,
+        ]);
     }
 }
