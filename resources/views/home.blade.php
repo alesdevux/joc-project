@@ -2,6 +2,9 @@
 
 @section('content')
 
+<x-banner type="" name="" value="$category->name">
+</x-banner>
+
 @if (Auth::check() && Auth::user()->isAdmin())
   <div>
     <a href="{{ route('categories.create') }}" class="flex justify-center p-2 border-t-2 border-principal place-items-center hover:bg-terciary hover:text-dark">
@@ -9,6 +12,8 @@
     </a>
   </div>
 @endif
+
+
 
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
     @foreach($categories as $category)

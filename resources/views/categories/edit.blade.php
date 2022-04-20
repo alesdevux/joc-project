@@ -16,13 +16,15 @@
   </x-input>
 
   <div>
-    <button type="submit" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
+    <x-button type="submit">
       Actualizar
-    </button>
-    <a href="{{ route('home') }}" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
+    </x-button>
+    <a href="{{ route('home') }}" class="px-4 py-2 font-semibold uppercase text-white bg-dark hover:bg-secundary">
       Cancelar
     </a>
   </div>
 
 </form>
+
 @endsection
+
