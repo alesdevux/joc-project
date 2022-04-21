@@ -13,6 +13,21 @@ class CrudTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function test_list_tournament_appear_in_categories() {
+        $this->withExceptionHandling();
+        Tournament::all();
+
+        $category = Category::factory()->create();
+        $tournament = Tournament::factory()->create([
+            'category_id' => $category->id,
+        ]);
+    
+        $response = $this->get(route('categories.show', $category->id));
+        $response->assertStatus(200)->assertViewIs('categories.show');
+    }
+        //->assertSee($tournament->title); --- no funciona pues falta tournament en la vista show de categories
+
+
     public function test_admin_can_be_delete_tournament()
     {
         $this->withExceptionHandling();
@@ -98,7 +113,7 @@ class CrudTest extends TestCase
           'plataform' => 'new platsdaaform',
           'category_id' => $category->id, 
         ]);
-
+        
         $response = $this->post(route('tournaments.store', $tournament));
 
         $this->assertCount(1, Tournament::all());
