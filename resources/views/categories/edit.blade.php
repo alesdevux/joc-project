@@ -16,9 +16,12 @@
   </x-input>
 
   <div>
-    <button type="submit" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
+    <!--<button type="submit" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
       Actualizar
-    </button>
+    </button> -->
+    <x-button>
+      Actualizar
+    </x-button>
     <a href="{{ route('home') }}" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
       Cancelar
     </a>
