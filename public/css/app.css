@@ -506,6 +506,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-6 {
   bottom: 1.5rem;
 }
+.left-4 {
+  left: 1rem;
+}
+.top-2 {
+  top: 0.5rem;
+}
+.bottom-3 {
+  bottom: 0.75rem;
+}
+.-bottom-12 {
+  bottom: -3rem;
+}
+.-bottom-4 {
+  bottom: -1rem;
+}
+.-bottom-14 {
+  bottom: -3.5rem;
+}
 .z-20 {
   z-index: 20;
 }
@@ -570,6 +588,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-5 {
   margin-top: 1.25rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .box-content {
   box-sizing: content-box;
 }
@@ -609,6 +630,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-9 {
   height: 2.25rem;
 }
+.h-40 {
+  height: 10rem;
+}
+.h-12 {
+  height: 3rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -640,9 +667,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-rotate: -2deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.rotate-1 {
+  --tw-rotate: 1deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .scale-125 {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-pointer {
@@ -657,11 +693,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .place-items-center {
   place-items: center;
 }
+.items-end {
+  align-items: flex-end;
+}
 .items-center {
   align-items: center;
 }
 .justify-center {
   justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .gap-4 {
   gap: 1rem;
@@ -714,6 +756,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-secundary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 238 84 / var(--tw-bg-opacity));
+}
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
 }
 .bg-cover {
   background-size: cover;
@@ -778,6 +827,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.text-\[16px\] {
+  font-size: 16px;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .font-semibold {
   font-weight: 600;
 }
@@ -786,6 +842,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .uppercase {
   text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
 }
 .leading-7 {
   line-height: 1.75rem;
@@ -900,11 +959,6 @@ video, image {
   border-color: rgb(255 238 84 / var(--tw-border-opacity));
 }
 
-.focus\:border-terciary:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 97 249 / var(--tw-border-opacity));
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -932,6 +986,30 @@ video, image {
 
 .group:hover .group-hover\:bottom-2 {
   bottom: 0.5rem;
+}
+
+.group:hover .group-hover\:bottom-10 {
+  bottom: 2.5rem;
+}
+
+.group:hover .group-hover\:bottom-4 {
+  bottom: 1rem;
+}
+
+.group:hover .group-hover\:-bottom-4 {
+  bottom: -1rem;
+}
+
+.group:hover .group-hover\:items-center {
+  align-items: center;
+}
+
+.group:hover .group-hover\:bg-black\/25 {
+  background-color: rgb(0 0 0 / 0.25);
+}
+
+.group:hover .group-hover\:pb-1 {
+  padding-bottom: 0.25rem;
 }
 
 .group:hover .group-hover\:text-dark {
@@ -989,6 +1067,10 @@ video, image {
 
   .sm\:h-20 {
     height: 5rem;
+  }
+
+  .sm\:h-60 {
+    height: 15rem;
   }
 
   .sm\:items-center {
