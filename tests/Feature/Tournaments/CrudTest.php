@@ -94,6 +94,21 @@ class CrudTest extends TestCase {
     $response->assertStatus(200)->assertViewIs('tournaments.edit');
   }
 
+  public function test_view_create_form() {
+    $this->withExceptionHandling();
+
+    $userAdmin = User::factory()->create(['isAdmin' => true]);
+    $this->actingAs($userAdmin);
+
+    $category = Category::factory()->create();
+    $tournament = Tournament::factory()->create([
+      'category_id' => $category->id,
+    ]);
+
+    $response = $this->get(route('tournaments.create', $tournament->id));
+    $response->assertStatus(200)->assertViewIs('tournaments.create');
+  }
+
   public function test_create_tournament() {
     $this->withExceptionHandling();
 
@@ -103,8 +118,8 @@ class CrudTest extends TestCase {
     $category = Category::factory()->create();
     $tournament = Tournament::factory()->create([
       'title' => 'Hola',
-      'description' => 'holiiis',
-      'award' => 'sasasa',
+      'description' => 'tikiti',
+      'award' => 'tukutu',
       'date' => '2030-04-01',
       'plataform' => 'new platsdaaform',
       'category_id' => $category->id,
