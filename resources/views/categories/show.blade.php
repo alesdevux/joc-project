@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<x-user_stake></x-user_stake>
 <x-banner :name="$category->name" :img="$category->image">
 
 </x-banner>
