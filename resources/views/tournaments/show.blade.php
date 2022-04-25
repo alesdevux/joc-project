@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<x-banner :name="$category->name" :img="$category->image">
+<x-banner :name="$tournament->name" :img="$tournament->image">
 </x-banner>
+
+<x-listevent name='lolololol' reward='1.000.000'>
+</x-listevent>
 
 <div class="bg-dark w-[244px] h-fit text-principal uppercase font-semibold" >
 </div>

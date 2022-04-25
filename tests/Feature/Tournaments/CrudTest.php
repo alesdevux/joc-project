@@ -22,9 +22,8 @@ class CrudTest extends TestCase {
     ]);
 
     $response = $this->get(route('categories.show', $category->id));
-    $response->assertStatus(200)->assertViewIs('categories.show');
+    $response->assertStatus(200)->assertViewIs('categories.show')->assertSee($tournament->title);
   }
-  //->assertSee($tournament->title); --- no funciona pues falta tournament en la vista show de categories
 
   public function test_admin_can_be_delete_tournament() {
     $this->withExceptionHandling();
