@@ -1,6 +1,6 @@
 @props([
   'name',
-  'value',
+  'value'=>'',
 ])
 
 <div class="relative pt-8 text-white bg-dark">

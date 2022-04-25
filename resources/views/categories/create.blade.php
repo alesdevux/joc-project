@@ -3,34 +3,28 @@
 @section('content')
 <form method="POST" action="{{ route('categories.store') }}" class="flex flex-col max-w-lg gap-5 mx-auto mt-5">
   @csrf
-  <div class="relative pt-8 text-white bg-dark">
-    <input type="text" id="name" name="name" class="absolute bottom-0 z-10 w-full px-2 py-1 border-4 border-white peer h-9 bg-dark focus:border-secundary focus:outline-none" value="" />
-    <label for="name" class="absolute z-50 px-1 font-semibold uppercase left-2 bg-dark bottom-6 peer-focus:text-secundary">
-      Nombre: *
-    </label>
-  </div>
+  <x-input  name="name" >
+    nombre 
+  </x-input>
 
-  <div class="relative pt-8 text-white bg-dark">
-    <input type="text" id="slug" name="slug" class="absolute bottom-0 z-10 w-full px-2 py-1 border-4 border-white peer h-9 bg-dark focus:border-secundary focus:outline-none" value="" />
-    <label for="slug" class="absolute z-50 px-1 font-semibold uppercase left-2 bg-dark bottom-6 peer-focus:text-secundary">
-      Slug: *
-    </label>
-  </div>
+  <x-input name="slug">
+    slug
+  </x-input>
 
-  <div class="relative pt-8 text-white bg-dark">
-    <input type="text" id="image" name="image" class="absolute bottom-0 z-10 w-full px-2 py-1 border-4 border-white peer h-9 bg-dark focus:border-secundary focus:outline-none" value="" />
-    <label for="image" class="absolute z-50 px-1 font-semibold uppercase left-2 bg-dark bottom-6 peer-focus:text-secundary">
-      Url de imagen: *
-    </label>
-  </div>
+  
+  <x-input name="image">
+    url de imagen 
+  </x-input>
 
-  <div>
-    <button type="submit" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
-      Crear categoría
-    </button>
-    <a href="{{ route('home') }}" class="px-4 py-2 font-bold text-white bg-dark hover:bg-secundary">
+
+  <div class="flex justify-between">
+    <x-link_button :route="route('home')">
       Cancelar
-    </a>
+    </x-link_button>
+
+    <x-button>
+      Crear categoria   
+    </x-button>
   </div>
 </form>
 @endsection

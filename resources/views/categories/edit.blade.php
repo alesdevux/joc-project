@@ -15,7 +15,7 @@
     Url de imagen:
   </x-input>
 
-  <div>
+  <div class="flex justify-between">
     <x-link_button :route="route('home')">
       Cancelar
     </x-link_button>
