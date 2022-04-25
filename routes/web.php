@@ -28,6 +28,7 @@ Route::get('/categories/create', [CategoryController::class, 'create'])->name('c
 Route::post('/categories/store', [CategoryController::class, 'store'])->name('categories.store')->middleware('auth','isAdmin');
 
 Route::get('/categories/show/{id}', [CategoryController::class, 'show'])->name('categories.show');
+Route::get('/tournaments/show/{id}', [TournamentController::class, 'show'])->name('tournaments.show');
 
 Route::delete('/tournaments/delete/{id}', [TournamentController::class, 'destroy'])->name('tournaments.delete')->middleware('auth','isAdmin');
 Route::get('/tournaments/edit/{id}', [TournamentController::class, 'edit'])->name('tournaments.edit')->middleware('auth','isAdmin');
