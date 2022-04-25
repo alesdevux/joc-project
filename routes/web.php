@@ -32,5 +32,5 @@ Route::get('/categories/show/{id}', [CategoryController::class, 'show'])->name('
 Route::delete('/tournaments/delete/{id}', [TournamentController::class, 'destroy'])->name('tournaments.delete')->middleware('auth','isAdmin');
 Route::get('/tournaments/edit/{id}', [TournamentController::class, 'edit'])->name('tournaments.edit')->middleware('auth','isAdmin');
 Route::patch('/tournaments/update/{id}', [TournamentController::class, 'update'])->name('tournaments.update')->middleware('auth','isAdmin');
-// Route::get('/tournaments/create', [TournamentController::class, 'create'])->name('tournaments.create')->middleware('auth','isAdmin');
+Route::get('/tournaments/create', [TournamentController::class, 'create'])->name('tournaments.create')->middleware('auth','isAdmin');
 Route::post('/tournaments/store', [TournamentController::class, 'store'])->name('tournaments.store')->middleware('auth','isAdmin');
