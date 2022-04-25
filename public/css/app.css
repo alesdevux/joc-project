@@ -591,8 +591,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
 .box-content {
   box-sizing: content-box;
+}
+.block {
+  display: block;
 }
 .flex {
   display: flex;
@@ -630,11 +636,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-9 {
   height: 2.25rem;
 }
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .h-40 {
   height: 10rem;
 }
 .h-12 {
   height: 3rem;
+}
+.h-\[65px\] {
+  height: 65px;
+}
+.h-\[25px\] {
+  height: 25px;
 }
 .h-6 {
   height: 1.5rem;
@@ -660,14 +677,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-auto {
   width: auto;
 }
+.w-\[244px\] {
+  width: 244px;
+}
 .w-28 {
   width: 7rem;
+}
+.w-\[50px\] {
+  width: 50px;
 }
 .w-20 {
   width: 5rem;
 }
-.w-\[404px\] {
-  width: 404px;
+.w-72 {
+  width: 18rem;
+}
+.w-fit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .w-44 {
   width: 11rem;
@@ -725,6 +753,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-5 {
   gap: 1.25rem;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .gap-1 {
   gap: 0.25rem;
@@ -786,8 +817,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(255 97 249 / var(--tw-bg-opacity));
 }
+.bg-logo {
+  background-image: url('https://raw.githubusercontent.com/aleswebgit/joc-project/Guillermo/img/Captura_de_pantalla_de_2022-04-11_10-34-16-removebg-preview(1).png');
+}
 .bg-cover {
   background-size: cover;
+}
+.bg-center {
+  background-position: center;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-2 {
   padding: 0.5rem;
@@ -829,11 +870,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
 .pt-8 {
   padding-top: 2rem;
 }
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 .align-baseline {
   vertical-align: baseline;

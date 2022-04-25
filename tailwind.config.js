@@ -19,7 +19,10 @@ module.exports = {
       },
       dropShadow: {
         'consistent':'4px 4px 0 #FF61F9'
-      }
+      },
+      backgroundImage: {
+        'logo': "url('https://raw.githubusercontent.com/aleswebgit/joc-project/Guillermo/img/Captura_de_pantalla_de_2022-04-11_10-34-16-removebg-preview(1).png')",
+      },
     },
   },
   plugins: [],
