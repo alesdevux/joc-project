@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Tournament;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -25,7 +26,8 @@ class TournamentController extends Controller {
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('tournaments.create', compact('categories'));
     }
 
     /**
