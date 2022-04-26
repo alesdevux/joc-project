@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder {
    */
   public function run() {
     Category::factory(5)->create();
-    Tournament::factory(10)->create();
+    Tournament::factory(10)->has(User::factory(12))->create();
     User::factory()->create(['name'=>'user1','email'=>'user1@gmail.com']);
     User::factory()->create(['name'=>'admin1','email'=>'admin1@gmail.com', 'isAdmin'=>true]);
   }
