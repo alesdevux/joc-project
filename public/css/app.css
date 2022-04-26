@@ -500,12 +500,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .right-0 {
   right: 0px;
 }
-.left-2 {
-  left: 0.5rem;
-}
-.bottom-6 {
-  bottom: 1.5rem;
-}
 .left-4 {
   left: 1rem;
 }
@@ -523,6 +517,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .-bottom-14 {
   bottom: -3.5rem;
+}
+.left-2 {
+  left: 0.5rem;
+}
+.bottom-6 {
+  bottom: 1.5rem;
 }
 .z-20 {
   z-index: 20;
@@ -588,11 +588,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-5 {
   margin-top: 1.25rem;
 }
-.mb-4 {
-  margin-bottom: 1rem;
-}
 .mt-10 {
   margin-top: 2.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -642,9 +642,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-16 {
   height: 4rem;
 }
-.h-9 {
-  height: 2.25rem;
-}
 .h-fit {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -664,6 +661,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-6 {
   height: 1.5rem;
+}
+.h-9 {
+  height: 2.25rem;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -688,9 +688,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-\[244px\] {
   width: 244px;
-}
-.w-28 {
-  width: 7rem;
 }
 .w-\[50px\] {
   width: 50px;
@@ -731,9 +728,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .scale-105 {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-pointer {
@@ -844,10 +851,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-center {
   background-position: center;
 }
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .p-2 {
   padding: 0.5rem;
 }
@@ -868,18 +871,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -891,6 +882,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1035,10 +1038,6 @@ video, image {
   border-width: 4px;
 }
 
-.hover\:border:hover {
-  border-width: 1px;
-}
-
 .hover\:border-principal:hover {
   --tw-border-opacity: 1;
   border-color: rgb(97 255 255 / var(--tw-border-opacity));
@@ -1049,14 +1048,14 @@ video, image {
   background-color: rgb(255 97 249 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-secundary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 238 84 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-principal:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(97 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-secundary:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 238 84 / var(--tw-bg-opacity));
 }
 
 .hover\:text-dark:hover {
@@ -1223,6 +1222,15 @@ video, image {
 }
 
 @media (min-width: 768px) {
+
+  .md\:-bottom-16 {
+    bottom: -4rem;
+  }
+
+  .md\:-rotate-1 {
+    --tw-rotate: -1deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
