@@ -48,8 +48,9 @@ class TournamentController extends Controller {
      */
     public function show($id)
     {
-        //
-    }
+        $tournament = Tournament::find($id);
+        return view('tournaments.show', compact('tournament'));
+      }
 
     /**
      * Show the form for editing the specified resource.
