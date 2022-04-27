@@ -52,13 +52,10 @@
             Inscribete
           </p>
         </div>
-        <div class="absolute top-0 z-10 w-full h-full bg-cover"></div>
+        <div class="absolute top-0 z-10 w-full h-full"></div>
         <div class="box-content absolute top-0 z-0 w-full h-full">
-          <img src="{{ $category->image }}" alt="" class="h-full">
+          <img src="{{ $category->image }}" alt="" class="h-full object-cover">
         </div>
-        {{-- <div
-          class="bg-[url('{{ $category->image }}')] absolute w-full h-full top-0 z-0 bg-cover">
-        </div> --}}
       </div>
     @endforeach
   </div>

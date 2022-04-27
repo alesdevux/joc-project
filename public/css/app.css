@@ -877,6 +877,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-center {
   background-position: center;
 }
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .p-2 {
   padding: 0.5rem;
 }
