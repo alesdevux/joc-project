@@ -11,9 +11,9 @@
     slug
   </x-input>
 
-  <x-input name="description">
-    Descripcion
-  </x-input>
+  <textarea name="description">
+  </textarea>
+
   <x-input name="award">
     Premio
   </x-input>
