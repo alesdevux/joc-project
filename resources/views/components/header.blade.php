@@ -1,6 +1,6 @@
 <div class="flex justify-between items-center w-full h-[65px] px-5 bg-dark">
 
-  <div class="w-[50px] h-[25px] bg-logo bg-cover"></div>
+  <a class="w-[50px] h-[25px] bg-logo bg-cover" href="{{route('home')}}"></a>
 
   <div class="flex gap-4">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
