@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->string('slug', 100);
-            $table->string('description', 255);
+            $table->text('description');
             $table->integer('award')->nullable();
             $table->dateTime('date');
             $table->string('plataform', 100);

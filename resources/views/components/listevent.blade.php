@@ -4,7 +4,7 @@
     ])
 
 
-<div class="flex h-12 w-fit justify-center bg-dark">
+<div class="flex h-12 w-fit justify-center bg-dark ">
   <section class="h-12 w-44 bg-dark text-sm flex flex-col gap-1 p-1">
     <p class="  font-pop font-semibold  text-white">
         {{$name}}

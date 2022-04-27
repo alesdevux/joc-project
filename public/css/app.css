@@ -524,6 +524,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-6 {
   bottom: 1.5rem;
 }
+.top-4 {
+  top: 1rem;
+}
+.-top-0 {
+  top: -0px;
+}
+.-top-1 {
+  top: -0.25rem;
+}
+.top-6 {
+  top: 1.5rem;
+}
+.-top-4 {
+  top: -1rem;
+}
+.top-1 {
+  top: 0.25rem;
+}
 .z-20 {
   z-index: 20;
 }
@@ -542,8 +560,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-50 {
   z-index: 50;
 }
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
 .m-0 {
   margin: 0px;
+}
+.m-2 {
+  margin: 0.5rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -602,6 +626,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 .box-content {
   box-sizing: content-box;
@@ -665,6 +698,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-9 {
   height: 2.25rem;
 }
+.h-20 {
+  height: 5rem;
+}
+.h-52 {
+  height: 13rem;
+}
+.h-32 {
+  height: 8rem;
+}
+.h-min {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -709,6 +756,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-\[414px\] {
   width: 414px;
 }
+.w-52 {
+  width: 13rem;
+}
+.w-28 {
+  width: 7rem;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -752,6 +805,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .place-items-center {
   place-items: center;
 }
+.content-center {
+  align-content: center;
+}
 .items-end {
   align-items: flex-end;
 }
@@ -781,6 +837,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.rounded-full {
+  border-radius: 9999px;
 }
 .border-4 {
   border-width: 4px;
@@ -855,6 +914,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   -o-object-fit: cover;
      object-fit: cover;
 }
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -902,6 +965,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-8 {
   padding-top: 2rem;
 }
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
 .text-center {
   text-align: center;
 }
@@ -939,6 +1008,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-h2 {
+  font-size: 27px;
 }
 .font-semibold {
   font-weight: 600;
@@ -990,6 +1062,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-secundary {
+  --tw-text-opacity: 1;
+  color: rgb(255 238 84 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;

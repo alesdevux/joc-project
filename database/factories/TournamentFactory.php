@@ -21,7 +21,7 @@ class TournamentFactory extends Factory
         return [
             'title'=>$title,
             'slug'=>$slug,
-            'description'=>$this->faker->paragraphs(),
+            'description'=>$this->faker->paragraphs(4, true),
             'award'=>$this->faker->numberBetween(50, 10000),
             'date'=>$this->faker->dateTime,
             'plataform'=>$this->faker->word,

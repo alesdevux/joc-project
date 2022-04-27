@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<form method="POST" action="{{ route('categories.store') }}" class="flex flex-col max-w-lg gap-5 mx-auto mt-5">
+<form method="POST" action="{{ route('categories.store') }}" class="flex flex-col max-w-lg gap-5 mx-auto mt-5 h-fit">
   @csrf
-  <x-input name="title" >
+  <x-input name="title">
     Nombre de evento
   </x-input>
 
@@ -11,8 +11,12 @@
     slug
   </x-input>
 
-  <textarea name="description">
-  </textarea>
+  <div class="relative  text-white bg-dark">
+    <textarea id="description" name="description" class="relative -top-1 z-10 w-full h-16 px-2 py-1 border-4 border-white peer bg-dark focus:border-secundary focus:outline-none" value=""></textarea>
+    <label for="description" class="absolute z-50 px-1 font-semibold uppercase left-2 bg-dark -top-4 peer-focus:text-secundary">
+      Descripción
+    </label>
+  </div>
 
   <x-input name="award">
     Premio
@@ -34,7 +38,7 @@
     <select id="category_id" name="category_id" class="absolute bottom-0 z-10 w-full px-2 py-1 border-4 border-white peer h-9 bg-dark focus:border-secundary focus:outline-none">
       <option value="" disabled>Selecciona una categoria</option>
       @foreach ($categories as $category)
-        <option value="{{ $category->id }}">{{ $category->name }}</option>
+      <option value="{{ $category->id }}">{{ $category->name }}</option>
       @endforeach
     </select>
     <label for="category_id" class="absolute z-50 px-1 font-semibold uppercase left-2 bg-dark bottom-6 peer-focus:text-secundary">
@@ -48,7 +52,7 @@
     </x-link_button>
 
     <x-button>
-      Crear evento   
+      Crear evento
     </x-button>
   </div>
 </form>
