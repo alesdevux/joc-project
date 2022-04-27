@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TournamentController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [CategoryController::class, 'index'])->name('home');
+Route::get('/profile/show/{id}', [UserController::class, 'show'])->name('users.show');
 
 Route::delete('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.delete')->middleware('auth','isAdmin');
 Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])->name('categories.edit')->middleware('auth','isAdmin');
