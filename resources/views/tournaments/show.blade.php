@@ -15,8 +15,8 @@
     inscribete
 </x-button>
 
-@foreach($tournament->users as $user)  
-  <x-user_stake :name="$user->name" :country="$user->country">
+@foreach($tournament->users as $user) 
+  <x-user_stake :name="$user->name" :country="$user->country" :award="$user->award">
   </x-user_stake>
 @endforeach
 
