@@ -22,6 +22,7 @@ Auth::routes();
 
 Route::get('/', [CategoryController::class, 'index'])->name('home');
 Route::get('/profile/show/{id}', [UserController::class, 'show'])->name('users.show');
+Route::get('/profile/edit/{id}', [UserController::class, 'edit'])->name('users.edit');
 
 Route::delete('/categories/delete/{id}', [CategoryController::class, 'destroy'])->name('categories.delete')->middleware('auth','isAdmin');
 Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])->name('categories.edit')->middleware('auth','isAdmin');
