@@ -39,6 +39,9 @@
             {{ __('Forgot Your Password?') }}
         </x-link_button>
         @endif
+        <x-link_button route="{{ route('register') }}">
+            {{ __('Register') }}
+        </x-link_button>
         <x-button>
             {{ __('Login') }}
         </x-button>
