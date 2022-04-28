@@ -5,6 +5,13 @@
 <x-banner :name="$category->name" :img="$category->image">
 
 </x-banner>
+@if (Auth::check() && Auth::user()->isAdmin())
+    
+    <a href="{{ route('tournaments.create') }}" class="flex justify-center p-2 text-secondary place-items-center hover:bg-terciary hover:text-dark">
+      Create new Tournament
+    </a>
+  
+@endif
 <div class="bg-dark w-[244px] h-fit text-principal uppercase font-semibold">
 </div>
 <section class="flex flex-col gap-2 mt-10 items-center">

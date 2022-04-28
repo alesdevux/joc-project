@@ -5,11 +5,11 @@
   <x-banner />
  
   @if (Auth::check() && Auth::user()->isAdmin())
-    <div>
+    
       <a href="{{ route('categories.create') }}" class="flex justify-center p-2 text-secondary place-items-center hover:bg-terciary hover:text-dark">
         Crear una nueva categoría
       </a>
-    </div>
+    
   @endif
 
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
