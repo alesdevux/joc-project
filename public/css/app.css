@@ -627,6 +627,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.inline-flex {
+  display: inline-flex;
+}
 .grid {
   display: grid;
 }
@@ -686,6 +689,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-auto {
   height: auto;
 }
+.h-0 {
+  height: 0px;
+}
+.h-96 {
+  height: 24rem;
+}
+.h-4 {
+  height: 1rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -744,6 +756,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-48 {
   width: 12rem;
 }
+.w-32 {
+  width: 8rem;
+}
+.w-36 {
+  width: 9rem;
+}
+.w-14 {
+  width: 3.5rem;
+}
+.w-4 {
+  width: 1rem;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -752,6 +776,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-\[414px\] {
   max-width: 414px;
+}
+.max-w-screen-sm {
+  max-width: 640px;
+}
+.max-w-sm {
+  max-width: 24rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
 }
 .-rotate-2 {
   --tw-rotate: -2deg;
@@ -820,8 +853,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-12 {
   gap: 3rem;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
 .overflow-hidden {
   overflow: hidden;
+}
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+.whitespace-normal {
+  white-space: normal;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.whitespace-pre {
+  white-space: pre;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -1053,6 +1101,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.mix-blend-saturation {
+  mix-blend-mode: saturation;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -1294,8 +1345,24 @@ video, image {
     bottom: -4rem;
   }
 
+  .md\:h-12 {
+    height: 3rem;
+  }
+
+  .md\:w-10 {
+    width: 2.5rem;
+  }
+
+  .md\:w-20 {
+    width: 5rem;
+  }
+
   .md\:max-w-\[1000px\] {
     max-width: 1000px;
+  }
+
+  .md\:max-w-none {
+    max-width: none;
   }
 
   .md\:-rotate-\[0\.75deg\] {
@@ -1305,6 +1372,10 @@ video, image {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:items-center {
+    align-items: center;
   }
 
   .md\:border-t-0 {

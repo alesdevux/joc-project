@@ -4,14 +4,14 @@
 <x-banner :name="$tournament->name" :img="$tournament->image">
 </x-banner>
 
-<x-listevent name='lolololol' reward='1.000.000'>
+<x-listevent :name="$tournament->title" :reward="$tournament->award">
 </x-listevent>
 
 {{-- <div class="bg-dark w-[244px] h-fit text-principal uppercase font-semibold" >
 </div>
 <section class="flex flex-col gap-2 mt-10"> --}}
 
-<x-button>
+<x-button class="mx-auto">
     inscribete
 </x-button>
 
