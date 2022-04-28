@@ -8,18 +8,20 @@
 <div class="bg-dark w-[244px] h-fit text-principal uppercase font-semibold">
 </div>
 <section class="flex flex-col gap-2 mt-10 items-center">
-    @foreach($category->tournaments as $tournament)
+    @forelse($category->tournaments as $tournament)
     <div class="flex">
         <x-infotime date='22' time='18:30'>
 
         </x-infotime>
-        <x-listevent name='tournament' reward='1.000.000'>
+        <x-listevent :name='$tournament->title' :reward='$tournament->award'>
 
         </x-listevent>
-        <x-button>
+        <x-link_button :route="route('tournaments.show', $tournament->id)">
             inscribete
-        </x-button>
+        </x-link_button>
     </div>
-    @endforeach
+    @empty
+    <p style="color:white; font-size:25px">We don't have tournaments of this kind right now ):</p>
+    @endforelse 
 </section>
 @endsection
