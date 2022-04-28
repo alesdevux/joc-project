@@ -4,7 +4,7 @@
 ])
 
 
-<div class="flex flex-col gap-1 text-sm justify-center items-center h-10 md:h-12 w-48">
+<div class="flex flex-col gap-1 text-sm justify-center h-10 md:h-12 w-48 md:w-full">
   <p class="font-semibold text-white overflow-hidden text-ellipsis uppercase">
     {{$name}}
   </p>

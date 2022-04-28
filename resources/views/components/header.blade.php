@@ -39,9 +39,9 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" fill="white" />
         </svg>
-        <ul class="absolute top-16 right-0 hidden h-auto w-48 bg-dark text-right uppercase group-hover:block hover:block">
-          <li><a href="">torneos pasados</a></li>
-          <li><a href="">categorias</a></li>
+        <ul class="absolute top-16 right-0 hidden h-auto w-fill bg-dark text-right uppercase group-hover:block">
+          {{-- <x-li_header>torneos pasados</x-li_header> --}}
+          <x-li_header :route="route('home')">categorias</x-li_header>
         </ul>
       </li>
     </ul>
