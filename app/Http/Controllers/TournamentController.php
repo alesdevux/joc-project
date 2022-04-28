@@ -94,4 +94,18 @@ class TournamentController extends Controller {
         Tournament::destroy($id);
         return redirect()->back();
     }
+
+    public function join($id) {
+      $tournament = Tournament::find($id);
+      $user = Auth::user();
+      $tournament->users()->attach($user);
+      return redirect()->back();
+    }
+
+    public function leave($id) {
+      $tournament = Tournament::find($id);
+      $user = Auth::user();
+      $tournament->users()->detach($user);
+      return redirect()->back();
+    }
 }
