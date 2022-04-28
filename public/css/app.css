@@ -530,6 +530,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-top-4 {
   top: -1rem;
 }
+.top-16 {
+  top: 4rem;
+}
 .z-20 {
   z-index: 20;
 }
@@ -680,6 +683,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-52 {
   height: 13rem;
 }
+.h-auto {
+  height: auto;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -727,11 +733,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-52 {
   width: 13rem;
 }
+.w-max {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.w-16 {
+  width: 4rem;
+}
+.w-48 {
+  width: 12rem;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
 .max-w-lg {
   max-width: 32rem;
+}
+.max-w-\[414px\] {
+  max-width: 414px;
 }
 .-rotate-2 {
   --tw-rotate: -2deg;
@@ -796,6 +816,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-1 {
   gap: 0.25rem;
+}
+.gap-12 {
+  gap: 3rem;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -863,6 +886,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(255 97 249 / var(--tw-bg-opacity));
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .bg-logo {
   background-image: url('https://raw.githubusercontent.com/aleswebgit/joc-project/Guillermo/img/Captura_de_pantalla_de_2022-04-11_10-34-16-removebg-preview(1).png');
 }
@@ -919,6 +946,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-8 {
   padding-top: 2rem;
+}
+.pl-5 {
+  padding-left: 1.25rem;
 }
 .text-center {
   text-align: center;
@@ -1054,6 +1084,10 @@ video, image {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.hover\:block:hover {
+  display: block;
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
@@ -1085,6 +1119,11 @@ video, image {
 .hover\:text-dark:hover {
   --tw-text-opacity: 1;
   color: rgb(31 49 63 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:drop-shadow-consistent:hover {
@@ -1136,6 +1175,10 @@ video, image {
 
 .group:hover .group-hover\:-bottom-4 {
   bottom: -1rem;
+}
+
+.group:hover .group-hover\:block {
+  display: block;
 }
 
 .group:hover .group-hover\:items-center {
@@ -1249,6 +1292,10 @@ video, image {
 
   .md\:-bottom-16 {
     bottom: -4rem;
+  }
+
+  .md\:max-w-\[1000px\] {
+    max-width: 1000px;
   }
 
   .md\:-rotate-\[0\.75deg\] {

@@ -23,41 +23,9 @@
 
 <body class="bg-dark font-pop">
     <div id="app">
-        <nav class="text-white uppercase bg-dark px-5 border-b border-white">
-            <ul class="flex justify-end flex-row gap-2">
-                <!-- Authentication Links -->
-                @guest
-                @if (Route::has('login'))
-                <li>
-                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
-                @endif
+        <x-header >
 
-                @if (Route::has('register'))
-                <li>
-                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>
-                @endif
-                @else
-                <li>
-                    <a href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                </li>
-                @endguest
-            </ul>
-
-        </nav>
-        <x-header></x-header>
+        </x-header>
         <main>
             @yield('content')
         </main>
