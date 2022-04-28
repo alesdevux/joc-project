@@ -11,7 +11,7 @@
 </p>
 </div>
 
-<div class= "flex justify-center items-center w-20 h-12 bg-secundary font-pop h2 text-center">
+<div class= "flex justify-center items-center w-20 h-12 bg-secondary font-pop h2 text-center">
 <p class="font-semibold text-base p-6">
     {{$time}}
 </p>
