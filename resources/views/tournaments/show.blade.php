@@ -7,11 +7,7 @@
 <x-listevent :name="$tournament->title" :reward="$tournament->award">
 </x-listevent>
 
-{{-- <div class="bg-dark w-[244px] h-fit text-principal uppercase font-semibold" >
-</div>
-<section class="flex flex-col gap-2 mt-10"> --}}
-
-<x-button class="mx-auto">
+<x-button>
     inscribete
 </x-button>
 
