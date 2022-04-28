@@ -41,7 +41,7 @@ class TournamentController extends Controller {
         $newTournament = request()->except('_token');
 
         Tournament::create($newTournament);
-        return redirect()->back();
+        return redirect()->route('categories.show', request()->category_id);
     }
 
     /**

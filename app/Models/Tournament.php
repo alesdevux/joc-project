@@ -16,6 +16,7 @@ class Tournament extends Model
        'award',
        'date',
        'plataform',
+       'category_id'
     ];
     
     public function users() {

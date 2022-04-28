@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<form method="POST" action="{{ route('categories.store') }}" class="flex flex-col max-w-lg gap-5 mx-auto mt-5 h-fit">
+<form method="POST" action="{{ route('tournaments.store') }}" class="flex flex-col max-w-lg gap-5 mx-auto mt-5 h-fit">
   @csrf
   <x-input name="title">
     Nombre de evento
