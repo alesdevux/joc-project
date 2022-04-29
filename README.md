@@ -11,11 +11,11 @@ La temática trata sobre eventos lúdicos con tematica de videojuegos y gaming e
 
 ## PRIMEROS PASOS
 - Instalar xampp
-- instalar larevel
-- crear un repositorio en github
-- clonar el repositorio en la carpeta de intalacion de xampp (..xampp/htdocs)
-- instalar composer para obtener la carpeta vendor. lanzar en terminal dentro de la carpeta: composer install
-- crear proyecto compser create-project larevel/ñarevel mi-poryecto-laravel
+- Instalar larevel
+- Crear un repositorio en github
+- Clonar el repositorio en la carpeta de intalacion de xampp (..xampp/htdocs)
+- Instalar composer para obtener la carpeta vendor. lanzar en terminal dentro de la carpeta: composer install
+- Crear proyecto compser create-project larevel/ñarevel mi-poryecto-laravel
 ## HERRAMIENTAS UTILIZADAS
 - PHP
 - HTML
