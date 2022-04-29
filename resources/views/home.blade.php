@@ -45,7 +45,7 @@
             {{ $category->name }}
           </h2>
           <h4 class="absolute w-full destacar -bottom-20 group-hover:bottom-16">
-            3 torneos en curso
+            {{ $category->tournaments->count() }} torneos en curso
           </h4>
           <div class="absolute w-full scale-125 -bottom-40 group-hover:bottom-0 bg-dark h-14 -rotate-2"></div>
           <p class="absolute w-full h2 -bottom-10 text-principal group-hover:bottom-2">
@@ -54,7 +54,7 @@
         </div>
         <div class="absolute top-0 z-10 w-full h-full"></div>
         <div class="box-content absolute top-0 z-0 w-full h-full">
-          <img src="{{ $category->image }}" alt="" class="h-full object-cover">
+          <img src="{{ $category->image }}" alt="" class="object-cover h-full">
         </div>
       </div>
     @endforeach
