@@ -13,17 +13,17 @@
   @endif
 
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-    {{ $indexHour = 0 }}
+    {{ $index = 0 }}
     @foreach($categories as $category)
       <div class="w-[275px] h-[404px] relative font-pop card mt-2 mx-auto group overflow-hidden hover:border-4 hover:border-principal cursor-pointer hover:drop-shadow-consistent">
-        @if($getHour[$indexHour] != "")
+        @if($getHour[$index] != "")
           <div class="absolute z-20 font-semibold text-white uppercase -left-36 top-5 group-hover:left-5">
             <p class="text-[13px] mb-2">Siguiente</p>
-            <p>Martes 23 junio</p>
-            <p>{{ $getHour[$indexHour] }}h</p>
+            <p>{{ $getDate[$index] }}</p>
+            <p>{{ $getHour[$index] }}h</p>
           </div>
         @endif
-        <p class="hidden">{{ $indexHour++ }}</p>
+        <p class="hidden">{{ $index++ }}</p>
         @if (Auth::check() && Auth::user()->isAdmin())
           <div class="absolute z-40 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
             <form action="{{ route('categories.delete', $category->id) }}" method="POST">

@@ -32,4 +32,19 @@ class Category extends Model {
     }
     return $time;
   }
+
+  static function getNextTournamentDateInCategory($categories) {
+    $date = [];
+    foreach ($categories as $category) {
+      if($category->tournaments->count() > 0) {
+        $tournament = $category->tournaments->first();
+        $individualDate = getDateOfDateTime($tournament->date);
+      }
+      if($category->tournaments->count() <= 0) {
+        $individualDate = "";
+      }
+      array_push($date, $individualDate);
+    }
+    return $date;
+  }
 }

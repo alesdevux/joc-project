@@ -14,7 +14,8 @@ class CategoryController extends Controller {
   public function index() {
     $categories = Category::orderBy('name', 'asc')->simplePaginate(8);
     $getHour = Category::getNextTournamentTimeInCategory($categories);
-    return view('home', compact(['categories', 'getHour']));
+    $getDate = Category::getNextTournamentDateInCategory($categories);
+    return view('home', compact(['categories', 'getHour', 'getDate']));
   }
 
   /**
