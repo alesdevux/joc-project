@@ -2,6 +2,8 @@
 **GG TURNAMENTS** es un proyecto creado por alumnos de Factoria F5. La idea era crear una aplicacion web donde se publican eventos.
 La temática trata sobre eventos lúdicos con tematica de videojuegos y gaming en general.
 
+![Captura de pantalla (13)](https://user-images.githubusercontent.com/99020400/165923369-d925f29a-1633-4710-becf-f27cb5fd0ed0.png)
+
 
 ## REQUISITOS 
 
