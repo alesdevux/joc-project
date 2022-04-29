@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Tournament;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller {
@@ -15,7 +16,8 @@ class CategoryController extends Controller {
     $categories = Category::orderBy('name', 'asc')->simplePaginate(8);
     $getHour = Category::getNextTournamentTimeInCategory($categories);
     $getDate = Category::getNextTournamentDateInCategory($categories);
-    return view('home', compact(['categories', 'getHour', 'getDate']));
+    $tournament = Tournament::orderBy('date', 'asc')->first();
+    return view('home', compact(['categories', 'getHour', 'getDate', 'tournament']));
   }
 
   /**
