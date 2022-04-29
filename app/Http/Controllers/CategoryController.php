@@ -13,7 +13,8 @@ class CategoryController extends Controller {
    */
   public function index() {
     $categories = Category::orderBy('name', 'asc')->simplePaginate(8);
-    return view('home', compact('categories'));
+    $getHour = Category::getNextTournamentTimeInCategory($categories);
+    return view('home', compact(['categories', 'getHour']));
   }
 
   /**

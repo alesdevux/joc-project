@@ -13,13 +13,17 @@
   @endif
 
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {{ $indexHour = 0 }}
     @foreach($categories as $category)
       <div class="w-[275px] h-[404px] relative font-pop card mt-2 mx-auto group overflow-hidden hover:border-4 hover:border-principal cursor-pointer hover:drop-shadow-consistent">
-        <div class="absolute z-20 font-semibold text-white uppercase -left-36 top-5 group-hover:left-5">
-          <p class="text-[13px] mb-2">Siguiente</p>
-          <p>Martes 23 junio</p>
-          <p>19:30h</p>
-        </div>
+        @if($getHour[$indexHour] != "")
+          <div class="absolute z-20 font-semibold text-white uppercase -left-36 top-5 group-hover:left-5">
+            <p class="text-[13px] mb-2">Siguiente</p>
+            <p>Martes 23 junio</p>
+            <p>{{ $getHour[$indexHour] }}h</p>
+          </div>
+        @endif
+        <p class="hidden">{{ $indexHour++ }}</p>
         @if (Auth::check() && Auth::user()->isAdmin())
           <div class="absolute z-40 flex flex-col text-white border-4 border-r-0 top-5 -right-16 group-hover:right-0 border-principal">
             <form action="{{ route('categories.delete', $category->id) }}" method="POST">
@@ -52,7 +56,7 @@
             Inscribete
           </p>
         </div>
-        <div class="absolute top-0 z-10 w-full h-full"></div>
+        <div class="absolute top-0 z-10 w-full h-full bg-black/20 group-hover:bg-black/40"></div>
         <div class="box-content absolute top-0 z-0 w-full h-full">
           <img src="{{ $category->image }}" alt="" class="object-cover h-full">
         </div>

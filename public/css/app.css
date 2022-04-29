@@ -804,6 +804,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(255 97 249 / var(--tw-bg-opacity));
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .bg-logo {
   background-image: url('https://raw.githubusercontent.com/aleswebgit/joc-project/Guillermo/img/Captura_de_pantalla_de_2022-04-11_10-34-16-removebg-preview(1).png');
 }
@@ -1039,6 +1043,10 @@ video, image {
 
 .group:hover .group-hover\:bg-black\/25 {
   background-color: rgb(0 0 0 / 0.25);
+}
+
+.group:hover .group-hover\:bg-black\/40 {
+  background-color: rgb(0 0 0 / 0.4);
 }
 
 .group:hover .group-hover\:pb-1 {
