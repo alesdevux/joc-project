@@ -5,7 +5,7 @@
   'time'=>'',
   ])
 
-<div class="relative h-40 mb-4 overflow-hidden duration-300 bg-cover sm:h-60 group">
+<div class="relative h-40 mb-4 overflow-hidden duration-300 bg-cover sm:h-60 group -mx-5">
   <div class="absolute z-30 text-white left-4 top-2">
     <h2 class="h2">{{$name}}</h2>
     <h4 class="uppercase">{{$category}}</h4>

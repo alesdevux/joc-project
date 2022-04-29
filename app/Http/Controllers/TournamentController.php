@@ -91,8 +91,9 @@ class TournamentController extends Controller {
      */
     public function destroy($id)
     {
+        $category_id = Tournament::find($id)->category_id;
         Tournament::destroy($id);
-        return redirect()->back();
+        return redirect()->route('categories.show', $category_id);
     }
 
     public function join($id) {

@@ -515,11 +515,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-bottom-14 {
   bottom: -3.5rem;
 }
-.top-16 {
-  top: 4rem;
-}
 .right-0 {
   right: 0px;
+}
+.top-16 {
+  top: 4rem;
 }
 .left-2 {
   left: 0.5rem;
@@ -558,6 +558,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
   margin-right: auto;
 }
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.-mx-5 {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -573,6 +581,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mt-\[65px\] {
+  margin-top: 65px;
+}
 .mt-20 {
   margin-top: 5rem;
 }
@@ -584,9 +595,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-0 {
   margin-bottom: 0px;
-}
-.mt-\[65px\] {
-  margin-top: 65px;
 }
 .box-content {
   box-sizing: content-box;
@@ -799,20 +807,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(31 49 63 / var(--tw-bg-opacity));
 }
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
+}
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(255 238 84 / var(--tw-bg-opacity));
 }
-.bg-black\/20 {
-  background-color: rgb(0 0 0 / 0.2);
-}
 .bg-terciary {
   --tw-bg-opacity: 1;
   background-color: rgb(255 97 249 / var(--tw-bg-opacity));
-}
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-logo {
   background-image: url('https://raw.githubusercontent.com/aleswebgit/joc-project/Guillermo/img/Captura_de_pantalla_de_2022-04-11_10-34-16-removebg-preview(1).png');
@@ -857,6 +861,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pl-5 {
   padding-left: 1.25rem;
@@ -1047,12 +1059,12 @@ video, image {
   align-items: center;
 }
 
-.group:hover .group-hover\:bg-black\/25 {
-  background-color: rgb(0 0 0 / 0.25);
-}
-
 .group:hover .group-hover\:bg-black\/40 {
   background-color: rgb(0 0 0 / 0.4);
+}
+
+.group:hover .group-hover\:bg-black\/25 {
+  background-color: rgb(0 0 0 / 0.25);
 }
 
 .group:hover .group-hover\:pb-1 {
