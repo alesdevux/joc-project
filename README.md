@@ -42,5 +42,15 @@ La temática trata sobre eventos lúdicos con tematica de videojuegos y gaming e
 - [ALES](http://https://github.com/aleswebgit "ALES")
 - [SERGI](http://https://github.com/Sergiaparicio "SERGI")
 
+## DIAGRAMAS
+
+#### USER
+
+![diagrama eventos](https://user-images.githubusercontent.com/99020400/165923632-c44573a6-4020-4da0-8b43-48bf6016e117.png)
+
+#### ADMIN
+
+![diagrama admin drawio](https://user-images.githubusercontent.com/99020400/165923592-878d5caf-312c-4ee7-85b1-a97ee7912e1e.png)
+
 ## AGRADECIMIENTOS 
 A Factoria F5 y a nuestros compañeros de promoción <3
