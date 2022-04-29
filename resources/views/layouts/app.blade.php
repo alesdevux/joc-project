@@ -22,11 +22,11 @@
 </head>
 
 <body class="bg-dark font-pop">
-    <div id="app">
+    <div id="app" class="relative">
         <x-header >
 
         </x-header>
-        <main>
+        <main class="mt-[65px]">
             @yield('content')
         </main>
     </div>

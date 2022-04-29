@@ -458,6 +458,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 1536px;
   }
 }
+.fixed {
+  position: fixed;
+}
 .absolute {
   position: absolute;
 }
@@ -581,6 +584,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.mt-\[65px\] {
+  margin-top: 65px;
 }
 .box-content {
   box-sizing: content-box;
