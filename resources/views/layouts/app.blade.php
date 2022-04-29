@@ -26,7 +26,7 @@
         <x-header >
 
         </x-header>
-        <main class="mt-[65px]">
+        <main class="mt-[65px] px-5">
             @yield('content')
         </main>
     </div>
