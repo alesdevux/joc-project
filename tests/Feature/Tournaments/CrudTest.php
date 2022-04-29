@@ -129,8 +129,8 @@ class CrudTest extends TestCase {
     $this->assertCount(1, Tournament::all());
     $this->assertDatabaseHas('tournaments', [
       'title' => 'Hola',
-      'description' => 'holiiis',
-      'award' => 'sasasa',
+      'description' => 'tikiti',
+      'award' => 'tukutu',
       'date' => '2030-04-01',
       'plataform' => 'new platsdaaform',
       'category_id' => $category->id,
